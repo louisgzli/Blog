@@ -26,7 +26,7 @@
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
         <property name="configLocation" value="classpath:conf/hibernate.cfg.xml"></property>
-        <property name="packagesToScan" value="com.xst"/>
+        <property name="packagesToScan" value="Blog"/>
     </bean>
 
     <!-- 配置 hibernate 的事务管理器 -->
@@ -45,13 +45,13 @@
 
     <!-- 配置事务切入点, 再把事务属性和事务切入点关联起来 -->
     <aop:config>
-        <aop:pointcut expression="execution(* com.xst.dao.*.*(..))"
+        <aop:pointcut expression="execution(* Blog.dao.*.*(..))"
                       id="txPointcut"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut"/>
     </aop:config>
 
     <!-- 配置自动扫描的包,忽略Controller -->
-    <context:component-scan base-package="com.xst"
+    <context:component-scan base-package="Blog"
                             use-default-filters="false">
         <context:include-filter type="annotation"
                                 expression="org.springframework.stereotype.Service"/>

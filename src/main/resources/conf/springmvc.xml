@@ -14,25 +14,25 @@
     <mvc:annotation-driven/>
 
     <!-- 自动扫描，且只扫描Controller -->
-    <context:component-scan base-package="com.xst"
+    <context:component-scan base-package="Blog"
                             use-default-filters="false">
         <context:include-filter type="annotation"
                                 expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
     <!-- 拦截器 -->
-    <mvc:interceptors>
+<!--    <mvc:interceptors>
 
-        <!-- 全局变量注入拦截器 -->
-<!--        <bean class="com.xst.interceptor.FirstInterceptor"/>
+        &lt;!&ndash; 全局变量注入拦截器 &ndash;&gt;
+&lt;!&ndash;        <bean class="com.xst.interceptor.FirstInterceptor"/>
 
         <mvc:interceptor>
             <mvc:mapping path="/admin/*"/>
             <bean id="loginInterceptor" class="com.xst.interceptor.LoginInterceptor"/>
-        </mvc:interceptor>-->
+        </mvc:interceptor>&ndash;&gt;
 
 
-    </mvc:interceptors>
+    </mvc:interceptors>-->
 
     <!-- 系统配置 -->
     <context:property-placeholder location="classpath:conf/config.properties"/>

@@ -17,11 +17,8 @@
 		<property name="connection.isolation">2</property>
 
 		<property name="connection.characterEncoding">utf8</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/db_xst_new</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/blog</property>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<mapping class="com.xst.entity.V9Category"/>
-		<mapping class="com.xst.entity.V9Resources"/>
-		<mapping class="com.xst.entity.V9Member" />
 	</session-factory>
 </hibernate-configuration>
 
