@@ -30,7 +30,10 @@ public class User {
     @ResponseBody
     @RequestMapping(value = "login",method =RequestMethod.POST)
     public StatusMessage login(Model model,String username,String password){
-
+        model.addAttribute("loginMessage","登陆成功！");
+        StatusMessage statusMessage = new StatusMessage(0,"登陆成功");
+        statusMessage.setStatus(1);
+        return statusMessage;
     }
 
 }
