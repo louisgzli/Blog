@@ -40,7 +40,7 @@
                 <h3 class="text-center col-md-4 col-md-offset-2">博客登陆系统</h3>
             </div>
             <div class="modal-body">
-                <form action="/blog/login" id="loginForm" class="form center-block center-block" method="post">
+                <form action="${rootPath}/login" id="loginForm" class="form center-block center-block" method="post">
                     <div class="input-group col-md-6">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                         <input type="text" class="form-control input-lg" id="examInputEmail1" name="username"

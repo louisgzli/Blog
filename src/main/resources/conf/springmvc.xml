@@ -21,18 +21,18 @@
     </context:component-scan>
 
     <!-- 拦截器 -->
-<!--    <mvc:interceptors>
+    <mvc:interceptors>
 
-        &lt;!&ndash; 全局变量注入拦截器 &ndash;&gt;
-&lt;!&ndash;        <bean class="com.xst.interceptor.FirstInterceptor"/>
+        <!-- 全局变量注入拦截器 -->
+        <bean class="Blog.interceptor.FirstInterceptor"/>
 
-        <mvc:interceptor>
+   <!--     <mvc:interceptor>
             <mvc:mapping path="/admin/*"/>
             <bean id="loginInterceptor" class="com.xst.interceptor.LoginInterceptor"/>
-        </mvc:interceptor>&ndash;&gt;
+        </mvc:interceptor>
+-->
 
-
-    </mvc:interceptors>-->
+    </mvc:interceptors>
 
     <!-- 系统配置 -->
     <context:property-placeholder location="classpath:conf/config.properties"/>

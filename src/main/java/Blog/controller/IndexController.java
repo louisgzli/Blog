@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class IndexController {
     @RequestMapping(value = "/index" ,method= RequestMethod.GET)
     public String index(){
-        return "index";
+        return "MainPage/index";
     }
 }
