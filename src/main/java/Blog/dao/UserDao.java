@@ -21,9 +21,7 @@ public class UserDao extends BaseDao{
 
         List<User> userlist=query.list();
 
-        return userlist.get(0);
-
-    }
+        return userlist.get(0);    }
     public void save(User user){
         super.save(user);
     }
