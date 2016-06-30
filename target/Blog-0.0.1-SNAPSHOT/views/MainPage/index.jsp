@@ -14,15 +14,27 @@
 <div class="main-wrapper">
 
     <header><!--页头开始-->
+
+
+
         <nav>
             <div class="logo"><a href="#">英雄联盟blog</a></div>
+            <c:if test="${sessionScope.user!=null}">
             <ul>
-                <li><a href="#">登陆</a></li>
-                <li><a href="#">链接1</a></li>
-                <li><a href="#">链接1</a></li>
-                <li><a href="jsps/registerpage.jsp">注册</a></li>
+                <li><a href="${rootPath}/user/logout">退出登录</a></li>
+                <li><a href="${rootPath}/user/login">博客列表</a></li>
+
+                <li><a href="#"> ${sessionScope.user.username}</a></li>
+                </ul>
+            </c:if>
+            <c:if test="${sessionScope.user==null}">
+            <ul>
+                <li><a href="${rootPath}/user/login">登陆</a></li>
+                <li><a href="${rootPath}/user/register">注册</a></li>
             </ul>
+            </c:if>
         </nav>
+
         <div id="banner">
             <div class="inner">
                 <div>

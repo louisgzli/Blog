@@ -40,7 +40,7 @@
                 <h3 class="text-center col-md-4 col-md-offset-2">博客登陆系统</h3>
             </div>
             <div class="modal-body">
-                <form action="${rootPath}/login" id="loginForm" class="form center-block center-block" method="post">
+                <form action="${rootPath}/user/login" id="loginForm" class="form center-block center-block" method="post">
                     <div class="input-group col-md-6">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                         <input type="text" class="form-control input-lg" id="examInputEmail1" name="username"
@@ -71,7 +71,7 @@
         console.log('loginSubmit')
         $.ajax({
             type: 'post',
-            url: '/blog/login',    //  填进你要处理表单信息的Servlet
+            url: '${rootPath}/user/login',    //  填进你要处理表单信息的Servlet
             data: $('#loginForm').serialize(),    //   字符串  name1=value1&name2=value2
             success: function(loginMsg) {
                 console.log(loginMsg)
