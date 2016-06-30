@@ -15,11 +15,11 @@ import java.util.Queue;
 @Repository
 public class UserDao extends BaseDao{
     public User getUserByName(String username){
-        String hql= "from User as us where us.username = ?0";
-        Query query=query(hql);
-        query.setParameter(0,username);
-        System.out.println("hql"+hql+"---"+username);
-        List<User> userlist=query(hql).list();
+        String hql= "from User as us where us.username = ?";
+        Query query=super.query(hql);
+        query.setString(0,username);
+
+        List<User> userlist=query.list();
 
         return userlist.get(0);
 
